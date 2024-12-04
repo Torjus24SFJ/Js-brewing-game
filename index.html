@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Potion Recipe Game</title>
+  </head>
+  <body>
+    <h1>Potion Recipe Game</h1>
+    <p>Create a healing potion! You need: 2 Herbs, 1 Berry, and 1 Mushroom.</p>
+    <button onclick="addIngredient('herbs')">Add Herbs</button>
+    <button onclick="addIngredient('berries')">Add Berries</button>
+    <button onclick="addIngredient('mushrooms')">Add Mushrooms</button>
+    <button onclick="addIngredient('water')">Add Water</button>
+    <button onclick="addIngredient('flowers')">Add Flowers</button>
+    <button onclick="checkPotion()">Brew Potion</button>
+    <button onclick="reset()">Reset</button>
+    <p>Potion type: <span id="potionType"></span></p>
+
+    <script>
+        const potionIngredients = [];
+        const healingPotion = ['herbs', 'herbs', 'berries', 'mushrooms']
+        
+        function addIngredient(ingredients){
+            potionIngredients.push(ingredients);
+            console.log(`Adding: ${ingredients}`);
+            console.log(`Current ingredients: ${potionIngredients}`)
+        }
+
+        function potionType(){
+            if(potionIngredients, healingPotion){
+                potionIngredients.includes('herbs', 'herbs', 'berries', 'mushrooms');{
+
+                    console.log('Potion type: Healing Potion');
+                }
+            // Bruk en array metode for å sjekke om innholdet i               
+            // potionIngredients har samme verdier som healingPotion
+            // Prøv ut .contains eller .includes 
+            }
+            else {
+                console.log('Potion type: Unknown');
+            }
+        }
+
+        function checkPotion(){
+            console.log(`Brewing potion with: ${potionIngredients.join(' ')}`); //join to add space
+            potionType();
+        };
+
+        function reset(){
+            potionIngredients.splice(0)
+            console.log(`You empty the caldron ${potionIngredients.join(' ')}`)
+        }
+    </script>
+  </body>
+</html>
